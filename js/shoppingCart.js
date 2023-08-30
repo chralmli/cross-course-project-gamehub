@@ -3,21 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const cartContainer = document.querySelector(".cart-container .cart-content-container");
     const checkoutForm = document.getElementById("checkout-form");
     const cartCountElement = document.querySelector(".cart-button-wrap a");
-    let cart = [];
+    // let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
     // Saving the cart quantity in local storage
     localStorage.setItem("cartCount", cart.length);
-
-    // Update cart counter 
-    function updateCartCount() {
-        const cartCount = localStorage.getItem("cartCount") || "0";
-        const cartButton = document.getElementById("cart-button");
-        cartButton.innerHTML = `<i class="fa fa-shopping-cart">${cartCount}</i>`;
-        const totalItems = cart.reduce((acc, item) => acc + item.count, 0);
-        cartCountElement.innerHTML  = `<i class="fa fa-shopping-cart"></i>${totalItems}`;
-    }
-
-        updateCartCount();
 
     function updatePrices() {
         const subtotal = cart.reduce((acc, item) => acc + item.price * item.count, 0);
@@ -43,10 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (action === "remove") {
                 cart = cart.filter(item => item.id !== id);
             }
-            localStorage.setItem("cart", JSON.stringify(cart));
+            saveCart();
             renderCartItems();
             updatePrices();
-            updateCartCount();
         } 
     }
 
@@ -106,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (e.target.classList.contains("fa-minus")) {
             modifyCart(itemId, "decrement");
         }
+        updateCartCount();
     });
 
     checkoutForm.addEventListener("submit", function(e) {

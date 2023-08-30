@@ -1,6 +1,10 @@
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+}
 let cart = JSON.parse(localStorage.getItem('cart'))  || [];
 
-function addItemToCart(item) {
+function addToCart(item) {
     // Check if item already exists in cart
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     if (existingItem) {
@@ -9,9 +13,7 @@ function addItemToCart(item) {
         item.count = 1;
         cart.push(item);
     }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartCount();
+    saveCart();
 }
 
 function decrementItemInCart(itemId) {
@@ -22,9 +24,7 @@ function decrementItemInCart(itemId) {
             cart = cart.filter(cartItem => cartItem.id !== itemId);
         }
     }
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartCount();
+    saveCart();
 }
 
 function updateCartCount() {
@@ -32,16 +32,16 @@ function updateCartCount() {
     // Update desktop cart button
     const cartButton = document.getElementById("cart-button");
     cartButton.innerHTML = `<i class="fa fa-shopping-cart"></i><span class="cart-count">${cartCount}</span>`;
-
     // Update mobile cart button
     const mobileCartButton = document.getElementById("mobile-cart-button");
     mobileCartButton.innerHTML = `<i class="fa fa-shopping-cart"></i><span class="cart-count">${cartCount}</span>`;
+
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     localStorage.setItem("cartCount", cartCount);
 }
 
 // Update cart count when page loads
 document.addEventListener("DOMContentLoaded", function() {
-    cart = JSON.parse(localStorage.getItem('cart')) || [];
-    updateCartCount();
+saveCart();
 })
