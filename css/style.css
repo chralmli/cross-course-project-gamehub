@@ -87,7 +87,7 @@ a {
 }
 
 .btn {
-    font-family: 'Cascadia Mono', cursive;
+    font-family: 'Cascadia Mono', cursive, monospace;
     font-size: 16px; 
     border-radius: 4px;
     cursor: pointer;
@@ -293,7 +293,7 @@ a {
 }
 #home-heading {
     font-size: 48px;
-    font-family: "Readex Pro", sans-serif;
+    font-family: "Readex Pro", sans-serif, monospace;
     text-shadow: 1px 1px 2px black;
 }
 #home-sub {
@@ -594,7 +594,7 @@ label.radio input:checked+span {
 }
 
 .price {
-    font-family: "Readex Pro", sans-serif;
+    font-family: "Readex Pro", sans-serif, monospace;
     font-size: 22px;
     font-weight: 800;
 }
@@ -604,7 +604,7 @@ label.radio input:checked+span {
 }
 
 .game-desc {
-    font-family: "Readex Pro", sans-serif;
+    font-family: "Readex Pro", sans-serif, monospace;
     margin-top: 3rem;
     text-shadow: 1px 1px 2px black;
 }
@@ -663,7 +663,7 @@ p.about-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 1px;
-    font-family: "Readex Pro", sans-serif;
+    font-family: "Readex Pro", sans-serif, monospace;
 }
 
 
