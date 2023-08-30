@@ -11,7 +11,7 @@
     <div id="body-bg-img"></div>
       <nav class="navbar navbar-fixed">
         <div id="logo-wrap">
-          <img src="/images/gamehub-white-logo.png" id="logo" alt="Gamehub Logo">
+          <a href="/index.html"><img src="/images/gamehub-white-logo.png" id="logo" alt="Gamehub Logo"></a>
         </div>
         <ul class="nav-list" id="navList">
           <a href="index.html"><li class="list-item">Home</li></a>
@@ -24,7 +24,7 @@
                 <button><i class="fa fa-search"></i></button>
             </form>
             <div class="mobile-cart-wrap">
-              <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size:22px"></i>0</a>
+              <a href="cart.html" id="mobile-cart-button"><i class="fa fa-shopping-cart"></i>0</a>
             </div>
           </div>
         </ul>
@@ -36,7 +36,7 @@
           </form>
         </div>
         <div class="cart-button-wrap">
-          <a href="cart.html" id="cart-button" style="font-size:16px"><i class="fa fa-shopping-cart" style="font-size:26px"></i>0</a>
+          <a href="cart.html" id="cart-button"><i class="fa fa-shopping-cart"></i>0</a>
         </div>
         <div class="mobile-menu" id="toggleButton">
           <div class="line"></div>
@@ -45,6 +45,7 @@
         </div>
       </nav>
     <main>
+      <div id="error-message" class="hidden"></div>
       <div class="container">
         <div class="games-container">
           <div class="heading-container">

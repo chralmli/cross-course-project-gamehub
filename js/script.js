@@ -29,8 +29,13 @@ function decrementItemInCart(itemId) {
 
 function updateCartCount() {
     const cartCount = cart.reduce((total, item) => total + item.count, 0);
+    // Update desktop cart button
     const cartButton = document.getElementById("cart-button");
-    cartButton.innerHTML = `<i class="fa fa-shopping-cart" style="font-size:26px">${cartCount}</i>`;
+    cartButton.innerHTML = `<i class="fa fa-shopping-cart"></i><span class="cart-count">${cartCount}</span>`;
+
+    // Update mobile cart button
+    const mobileCartButton = document.getElementById("mobile-cart-button");
+    mobileCartButton.innerHTML = `<i class="fa fa-shopping-cart"></i><span class="cart-count">${cartCount}</span>`;
 
     localStorage.setItem("cartCount", cartCount);
 }

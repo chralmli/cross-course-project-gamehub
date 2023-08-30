@@ -12,14 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateCartCount() {
         const cartCount = localStorage.getItem("cartCount") || "0";
         const cartButton = document.getElementById("cart-button");
-        cartButton.innerHTML = `<i class="fa fa-shopping-cart" style="font-size:26px">${cartCount}</i>`;
+        cartButton.innerHTML = `<i class="fa fa-shopping-cart">${cartCount}</i>`;
         const totalItems = cart.reduce((acc, item) => acc + item.count, 0);
-        cartCountElement.innerHTML  = `<i class="fa fa-shopping-cart" style="font-size:26px"></i>${totalItems}`;
+        cartCountElement.innerHTML  = `<i class="fa fa-shopping-cart"></i>${totalItems}`;
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
         updateCartCount();
-    });
 
     function updatePrices() {
         const subtotal = cart.reduce((acc, item) => acc + item.price * item.count, 0);

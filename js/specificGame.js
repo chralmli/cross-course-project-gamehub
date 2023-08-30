@@ -7,7 +7,7 @@ const apiEndpoint = `https://api.noroff.dev/api/v1/gamehub/${gameId}`;
 
 // Show loading indicator
 const loadingIndicator = document.getElementById("loading-indicator");
-loadingIndicator.style.display = "block";
+loadingIndicator.classList.remove("hidden");
 
     // Add to cart
     function addToCart(game) {
@@ -31,7 +31,7 @@ async function getGameDetails () {
         const response = await fetch(apiEndpoint);
         const game = await response.json();
         
-        loadingIndicator.style.display = "none";
+        loadingIndicator.classList.add("hidden");
 
         // Create HTML
         const gameDetails = `
@@ -64,7 +64,7 @@ async function getGameDetails () {
     } catch (error) {
         console.error("Fetch error:", error);
         // Hide loading indicator if there was an error
-        loadingIndicator.style.display = "none";
+        loadingIndicator.classList.add("hidden");
     }
 }
 
