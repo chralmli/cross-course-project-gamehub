@@ -582,7 +582,7 @@ label.radio input:checked+span {
 
 #flash {
     position: fixed;
-    top: 5vh;
+    top: 4rem;
     background: green;
     color: white;
     padding: 10px;
@@ -790,7 +790,7 @@ textarea.form-control {
 /* FOOTER */
 footer {
     height: auto;
-    margin-top: auto;
+    margin-top: 3rem;
     background-color: #1d1252;
     padding-top: 20px;
     padding-bottom: 20px;
