@@ -2,6 +2,7 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
 }
+
 let cart = JSON.parse(localStorage.getItem('cart'))  || [];
 
 function addToCart(item) {
@@ -14,6 +15,7 @@ function addToCart(item) {
         cart.push(item);
     }
     saveCart();
+    showFlashMessage();
 }
 
 function decrementItemInCart(itemId) {

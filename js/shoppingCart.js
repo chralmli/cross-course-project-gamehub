@@ -1,9 +1,6 @@
-console.log("file loaded");
 document.addEventListener("DOMContentLoaded", function() {
     const cartContainer = document.querySelector(".cart-container .cart-content-container");
     const checkoutForm = document.getElementById("checkout-form");
-    const cartCountElement = document.querySelector(".cart-button-wrap a");
-    // let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
     // Saving the cart quantity in local storage
     localStorage.setItem("cartCount", cart.length);

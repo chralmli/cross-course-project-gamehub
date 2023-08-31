@@ -13,7 +13,7 @@
 body {
     background-color: #090323;
     color: white;
-    font-family: "Cascadia Mono", sans-serif, monospace;
+    font-family: "Readex Pro", sans-serif;
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
@@ -87,7 +87,7 @@ a {
 }
 
 .btn {
-    font-family: 'Cascadia Mono', cursive, monospace;
+    font-family: "Readex Pro", sans-serif;
     font-size: 16px; 
     border-radius: 4px;
     cursor: pointer;
@@ -217,7 +217,7 @@ a {
 
 #cart-button span, 
 #mobile-cart-button span {
-    font-family: "Cascadia Mono", cursive, monospace;
+    font-family: "Readex Pro", sans-serif;
 }
 
 .mobile-search input[type="text"] {
@@ -565,7 +565,7 @@ label.radio input:checked+span {
 
 }
 .fa-arrow-right {
-    color: white;
+    color: #090323;
     font-size: 16px;
     margin: 0 0 0 5px;
 }
@@ -578,6 +578,15 @@ label.radio input:checked+span {
     flex-direction: column;
     margin: auto;
     padding: 5rem 20px;
+}
+
+#flash {
+    position: fixed;
+    top: 5vh;
+    background: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .spec-game-title {
@@ -594,7 +603,7 @@ label.radio input:checked+span {
 }
 
 .price {
-    font-family: "Readex Pro", sans-serif, monospace;
+    font-family: "Readex Pro", sans-serif;
     font-size: 22px;
     font-weight: 800;
 }
@@ -652,19 +661,54 @@ label.radio input:checked+span {
 }
 
 /* ABOUT PAGE */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.about-section {
+    background: #1d1252;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
 .about-h1 {
-    margin-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
 }
-.about-wrap {
-    margin-top: 3rem;
+.about-h1, .sub-heading {
+    margin-bottom: 20px;
 }
-p.about-text {
-    white-space: pre-line;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    font-family: "Readex Pro", sans-serif, monospace;
+
+.sub-heading {
+    font-size: 1.8rem;
 }
+
+.about-text, p {
+    line-height: 1.6;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-button {
+    background: #5147DB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1d1252;
+}
+
 
 
 /* GENERAL FORM STYLES */
@@ -917,7 +961,7 @@ i {
     /* DESKTOP CART PAGE */
     .cart-container {
         flex-direction: row;
-        max-width: 800px;
+        max-width: 960px;
     }
     .cart-content-container {
         display: flex;
@@ -934,7 +978,7 @@ i {
     /* DESKTOP GAME SPECIFIC  */
     .game-container {
         flex-direction: row;
-        max-width: 1600px;
+        max-width: 960px;
     }
     .left-col {
         margin-right: 1.5rem;
@@ -950,5 +994,13 @@ i {
     }
 }
 
-
+@media (min-width: 960px) and (max-width: 1440px) {
+    .grid-container,
+    .game-container,
+    .container,
+    .footer-content,
+    .cart-container {
+        max-width: 800px;
+    }
+}
 

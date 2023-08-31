@@ -47,5 +47,14 @@ async function getGameDetails () {
     }
 }
 
+// display a message when the user has added a new item to cart
+function showFlashMessage() {
+    const flash = document.getElementById("flash");
+    flash.classList.remove("hidden");
+    setTimeout(() => {
+        flash.classList.add("hidden");
+    }, 3000);
+}
+
 // Call the function to get the game details
 getGameDetails();
