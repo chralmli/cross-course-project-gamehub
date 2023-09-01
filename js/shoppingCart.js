@@ -98,4 +98,8 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         console.log("Checkout successful!");
     });
+
+    document.getElementById("checkBtn").addEventListener("click", function() {
+        window.location.href = "checkout.html";
+    });
 });
