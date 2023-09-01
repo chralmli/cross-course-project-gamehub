@@ -815,8 +815,8 @@ textarea.form-control {
 /* CHECKOUT PAGE */
 .checkout-container {
     max-width: 600px;
-    margin: 0 auto;
     padding: 20px;
+    margin: 0 auto;
     box-shadow: 0px 0px 10px 0px #ccc;
     text-align: center;
     margin-top: 200px;
@@ -1072,5 +1072,28 @@ i {
 @media (min-width: 1200px) {
     .navbar {
         font-size: 16px;
+    }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 340px) {
+    #home-heading {
+        font-size: 42px;
+    }
+    .landing-btn {
+        font-size: 10px;
+    }
+    .heading-btn {
+        font-size: 10px;
+    }
+    .spec-game-title {
+        font-size: 32px;
+    }
+    .btn {
+        font-size: 12px;
+    }
+    .mobile-cart-wrap {
+        margin-right: 0;
+        padding: 5px 0 5px 0;
     }
 }
