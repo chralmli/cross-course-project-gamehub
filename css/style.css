@@ -97,6 +97,7 @@ a {
     background-color: #dedede;
     color: #000;
 }
+
 .btn:hover {
     background-color: #bebebe;
     transition: 0.2s ease-in-out;
@@ -156,17 +157,21 @@ a {
 .navbar-fixed {
     transition: 0.3s ease-in-out;
 }
+
 .navbar-active {
     background-color: #1d1252;
 }
+
 .navbar a {
     color: white;
     text-decoration: none;
     text-shadow: 3px 3px 6px black;
 }
+
 .navbar a:hover {
     font-weight: bold;
 }
+
 .nav-list {
     background-color: #1d1252;
     list-style-type: none;
@@ -175,19 +180,21 @@ a {
     width: 100%;
     display: none;
 }
+
 .active {
     display: block;
 }
+
 .nav-list .list-item {
     display: block;
     padding: 20px 10px;
     font-family: 'Press Start 2P', sans-serif;
 }
 
-
 .list-item:hover {
     background-color: #5147DB;
 }
+
 .desktop-search {
     display: none;
 }
@@ -201,6 +208,7 @@ a {
     max-width: 500px;
     margin: 0 auto;
 }
+
 #searchBar {
     display: flex;
     align-items: center;
@@ -213,6 +221,7 @@ a {
 .mobile-cart-wrap{
     margin-right: 20px;
 }
+
 .fa-shopping-cart {
     color: white;
     cursor: pointer;
@@ -243,17 +252,20 @@ a {
     cursor: pointer;
     margin-left: 10px;
 }
+
 .fa-search {
     color: white;
     font-size: 16px;
     margin-top: 0;
 }
+/* search bar responsive styles */
 @media (min-width: 360px) {
     #searchBar {
         margin-bottom: 20px;
         margin-top: 15px;
         margin-left: 20px;
     }
+
     .mobile-search {
         flex-direction: row;
     }
@@ -273,9 +285,11 @@ a {
     margin: 0 auto;
     color: white;
 }
+
 #landing-btn-wrapper {
     margin-top: 30px;
 }
+
 .landing-btn {
     padding: 8px 8px;
     font-weight: 600;
@@ -285,26 +299,33 @@ a {
     font-size: 12px;
     min-width: 135px;
 }
+
 #all-games-btn {
     background-color: #dedede;
 }
+
 #all-games-btn:hover {
     background-color: #a5a5a5;
     color: white;
 }
+
 #sell-btn {
     background-color: transparent;
     color: white;
+    border: 3px solid #dedede;
 }
+
 #sell-btn:hover {
     background-color: #dedede;
     color: #000;
 }
+
 #home-heading {
     font-size: 48px;
     font-family: "Press Start 2P", sans-serif;
     text-shadow: 1px 1px 2px black;
 }
+
 #home-sub {
     font-size: 22px;
     font-weight: lighter;
@@ -326,49 +347,60 @@ main {
     grid-row-gap: 20px;
     margin-bottom: 4rem;
 }
+
 .game-item {
     padding: 10px;
     max-width: 300px;
     margin: 0 auto;
 }
+
 .heading {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
 .featured-heading {
     margin-top: 0;
 }
+
 .heading-line {
     border-bottom: 2px solid #5147DB6b;
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 .heading-btn {
     border-radius: 4px;
     padding: 4px 6px;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 12px;
 }
+
 .game-img {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
 }
+
 .game-spec {
     text-align: center;
 }
+
 .game-title,
 .game-price {
     font-size: 16px;
 }
+
 .game-price {
     margin: 15px 0 5px 0;
     color: #52e35c;
 }
+
 .game-title {
     font-weight: 400;
 }
+
 .game-btn {
     padding: 4px 0 4px 0;
     width: 100%;
@@ -385,8 +417,7 @@ main {
     margin: 0 auto;
 }
 
-
-/* Sell */
+/* Sell Section */
 .container-box {
     margin: 2rem 20px 4rem 20px;
     text-align: center;
@@ -394,19 +425,23 @@ main {
     background-color: #1d12527a;
     border-radius: 10px;
 }
+
 .heading-2 {
     font-weight: 700;
     margin: 1rem 0 2rem 0;
 }
+
 .sub-heading{
     margin-bottom: 1rem;
     font-weight: 500;
 }
+
 p {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 300;
 }
+
 .gen-btn {
     margin-top: 1rem;
     padding: 6px 6px;
@@ -425,9 +460,11 @@ p {
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
 }
+
 .cart-content-container {
     width: 100%;
 }
+
 .cart-items {
     width: 100%;
     background-color: #1d1252;
@@ -438,9 +475,11 @@ p {
     justify-content: space-between;
     align-items: center;
 }
+
 .img-box {
     margin-bottom: -5px;
 }
+
 .action,
 .desc,
 .title,
@@ -448,42 +487,50 @@ p {
 .fa-solid,
 .amount {
     font-size: 16px;
+    padding: 8px;
 }
+
 .action {
     cursor: pointer;
     border-bottom: 1px solid white;
 }
+
 .desc {
     width: 25%;
 }
+
 .title {
     font-weight: 500;
 }
+
 .platform {
     font-size: 12px;
     opacity: 0.6;
     font-weight: 400;
 }
+
 .counter {
     width: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .fa-solid {
     cursor: pointer;
 }
+
 .fa-plus, 
 .fa-minus {
     margin: 0;
     color: white;
-    padding-right: 5px;
-    padding-left: 5px;
 }
+
 .amount {
     width: 15%;
     font-weight: 600;
 }
+
 i.fa-trash {
     color: white;
     margin: 0;
@@ -503,11 +550,13 @@ i.fa-trash {
     flex-direction: column;
     margin-top: 15px;
 }
+
 .col {
     margin-bottom: 15px;
     font-weight: 500;
     font-size: 16px;
 }
+
 .check-row {
     width: 100%;
 }
@@ -521,6 +570,7 @@ i.fa-trash {
 .left {
     margin-right: 10px;
 }
+
 .right {
     margin-left: 10px;
 }
@@ -532,15 +582,18 @@ i.fa-trash {
     width: 100%;
     max-width: 500px;
 }
+
 label.radio {
     cursor: pointer;
 }
+
 label.radio input {
     position: absolute;
     top: 0;
     left: 0;
     visibility: hidden;
 }
+
 label.radio span {
     padding: 1px 12px;
     border: 2px solid rgb(176, 176, 176);
@@ -548,6 +601,7 @@ label.radio span {
     border-radius: 3px;
     text-transform: uppercase;
 }
+
 label.radio input:checked+span {
     border-color: white;
 }
@@ -557,16 +611,19 @@ label.radio input:checked+span {
     margin-top: 25px;
     width: 100%;
 }
+
 .price-info {
     margin: 25px 0 25px;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
 }
+
 .check-btn-container {
     display: flex;
     justify-content: center;
 }
+
 .pay-btn {
     display: flex;
     justify-content: space-between;
@@ -580,6 +637,7 @@ label.radio input:checked+span {
     font-weight: 500;
 
 }
+
 .fa-arrow-right {
     color: #090323;
     font-size: 16px;
@@ -588,6 +646,23 @@ label.radio input:checked+span {
 
 
 /* GAME SPECIFIC PAGE */
+.return_btn_container {
+    margin-top: 7.5rem;
+}
+
+.return_btn {
+    text-transform: uppercase;
+    padding: 8px 15px;
+    background-color: transparent;
+    border-bottom: 3px solid #a5a5a5;
+    font-weight: 500;
+}
+
+.return_btn:hover {
+    border-bottom: 4px solid #bebebe;
+    font-weight: 800;
+}
+
 .game-container {
     display: flex;
     justify-content: center;
@@ -610,23 +685,30 @@ label.radio input:checked+span {
     margin-top: 30px;
     font-size: 38px;
 }
+
 .spec-platform {
     margin: 10px 0 30px 0;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1.5px;
 }
+
 .right-col {
     background: #1d1252;
     border-radius: 10px;
     padding: 20px 30px;
-    margin: 20px 0 20px 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 500px;
 }
+
 .info-wrap {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
+
 .price {
     font-family: "Roboto", sans-serif;
     font-size: 22px;
@@ -655,6 +737,7 @@ label.radio input:checked+span {
     justify-content: center;
     font-size: 22px;
 }
+
 .contact-h1 {
     margin: 5rem 0 3rem 0;
 }
@@ -672,18 +755,21 @@ label.radio input:checked+span {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
 }
+
 .flex-group {
     margin: 0 10px 30px 10px;
 }
+
 .contact-info-heading {
     font-size: 16px;
     margin-top: 10px;
 }
+
 #contact-btn {
     padding: 6px 8px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* ABOUT PAGE */
@@ -701,10 +787,17 @@ label.radio input:checked+span {
     text-align: center;
 }
 
+.about-img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
 .about-h1 {
     text-align: center;
     font-size: 2rem;
 }
+
 .about-h1, .sub-heading {
     margin-bottom: 20px;
 }
@@ -723,8 +816,10 @@ label.radio input:checked+span {
 }
 
 .cta-button {
-    background: #5147DB;
-    color: white;
+    background: #dedede;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -732,9 +827,8 @@ label.radio input:checked+span {
 }
 
 .cta-button:hover {
-    background-color: #1d1252;
+    background-color: #a5a5a5;
 }
-
 
 
 /* GENERAL FORM STYLES */
@@ -745,6 +839,7 @@ label.radio input:checked+span {
     margin: 3rem 0 8rem 0;
  
 }
+
 .form-input {
     background: #1d1252df;
     border: none;
@@ -752,10 +847,12 @@ label.radio input:checked+span {
     height: 40px;
     padding-left: 15px;
 }
+
 .form-input::placeholder {
     font-size: 16px;
     color: rgb(190, 190, 190);
 }
+
 .form-row {
     display: flex;
     flex-wrap: wrap;
@@ -766,13 +863,16 @@ label.radio input:checked+span {
     border-radius: 10px;
     max-width: 600px;
 }
+
 .form-group {
     margin-bottom: 1rem;
 }
+
 .form-col {
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .form-control {
     height: 38px;
     width: 100%;
@@ -780,13 +880,16 @@ label.radio input:checked+span {
     border-radius: 4px;
 
 }
+
 .form-half-col {
     flex: 0 0 50%;
     max-width: 50%;
 }
+
 textarea.form-control {
     height: inherit;
 }
+
 #message {
     resize: vertical;
 }
@@ -799,12 +902,14 @@ textarea.form-control {
     margin-top: 15px;
     justify-content: center;
 }
+
 .form-wrap {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 125px;
 }
+
 .form-flex {
     background-color: #1d12526b;
     padding: 10px;
@@ -851,6 +956,7 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 .footer-content {
     display: flex;
     justify-content: center;
@@ -859,6 +965,7 @@ footer {
     max-width: 960px;
     margin: 0 auto;
 }
+
 .footer-nav {
     margin: 10px auto;
     display: flex;
@@ -870,11 +977,14 @@ footer {
     padding-left: 5px;
     padding-right: 5px;
 }
+
 .footer-link {
+    font-weight: 500;
     text-decoration: none;
     color: white;
     padding: 0.5rem;
 }
+
 .footer-link:hover {
     text-decoration: underline;
 }
@@ -892,6 +1002,7 @@ i {
     margin-top: 7px;
     color: #000;
 }
+
 .social-icons a {
     width: 40px;
     height: 40px;
@@ -901,6 +1012,7 @@ i {
     transition: .6s;
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
 }
+
 .cp-text {
     font-family: "Roboto", sans-serif;
     text-align: center;
@@ -915,19 +1027,18 @@ i {
 @media (min-width: 960px) {
     /* Desktop Background */
     #landing-bg {
-        /* background-image: url(/images/spacegameuniverse.jpg); */
         background-image: url(/images/game-controller.jpg);
-        /* min-width: 100%;
-        min-height: 100vh; */
     }
 
     /* Desktop Navigation Bar */
     #logo {
         height: 50px;
     }
+
     .mobile-menu {
         display: none;
     }
+
     .navbar {
         background-color: transparent;
         display: inline-flex;
@@ -935,9 +1046,11 @@ i {
         justify-content: space-around;
         align-items: center;
     }
+
     .navbar-active {
         background-color: #1d1252;
     }
+
     .nav-list {
         display: flex;
         background-color: transparent;
@@ -945,23 +1058,33 @@ i {
         padding-top: 0;
         width: auto;
     }
+
+    ul {
+        margin-bottom: 0;
+    }
+
     .nav-list .list-item {
         padding-right: 20px;
         padding-left: 20px;
     }
+
     .mobile-search {
         display: none;
     }
+
     .desktop-search {
         display: flex;
     }
+
     .cart-button-wrap {
         display: block;
     }
+
     #searchBar {
         display: flex;
         align-items: center;
     }
+
     .desktop-search input[type="text"] {
         width: 300px;
         height: 30px;
@@ -978,15 +1101,18 @@ i {
         cursor: pointer;
         margin-left: 10px;
     }
+
     .fa-search {
         color: white;
         font-size: 16pt;
         margin-top: 0;
     }
+
     #home-heading {
         font-size: 86px;
         text-shadow: 3px 3px 6px black;
     }
+
     #home-sub {
         font-size: 36px;
         text-shadow: 3px 3px 6px black;
@@ -1010,22 +1136,27 @@ i {
     .contact-icons-flex {
         flex-direction: row;
     }
+
     .flex-group {
             width: 200px;
     }
+
     /* DESKTOP CART PAGE */
     .cart-container {
         flex-direction: row;
         max-width: 960px;
     }
+
     .cart-content-container {
         display: flex;
         flex-direction: column;
         margin-right: 3rem;
     }
+
     .heading-line {
         margin-bottom: 2rem;
     }
+
     .check-heading {
         font-size: 22px;
     }
@@ -1036,15 +1167,20 @@ i {
         max-width: 960px;
         text-align: left;
     }
+
     .left-col {
         margin-right: 1.5rem;
     }
+
     .right-col {
         margin-left: 1.5rem;
+        margin-top: 0;
     }
+
     .game-desc p {
         font-size: 18px;
     }
+
     .game-img {
         max-width: none;
     }
@@ -1060,7 +1196,6 @@ i {
         max-width: 800px;
     }
 }
-
 
 
 @media (min-width: 960px) {
@@ -1080,18 +1215,23 @@ i {
     #home-heading {
         font-size: 42px;
     }
+
     .landing-btn {
         font-size: 10px;
     }
+
     .heading-btn {
         font-size: 10px;
     }
+
     .spec-game-title {
         font-size: 32px;
     }
+
     .btn {
         font-size: 12px;
     }
+
     .mobile-cart-wrap {
         margin-right: 0;
         padding: 5px 0 5px 0;

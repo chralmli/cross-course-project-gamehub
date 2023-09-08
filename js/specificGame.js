@@ -31,6 +31,9 @@ async function getGameDetails () {
             <div class="game-desc">
             <p class="game-description">${game.description}</p>
             </div>
+            <div class="return_btn_container">
+            <a href="index.html" class="return_btn">Return to Shop</a>
+          </div>
         </div>`;
 
         // Add the HTML to the container
