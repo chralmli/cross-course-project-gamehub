@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,12 +14,12 @@
           <a href="/index.html"><img src="/images/gamehub-white-logo.png" id="logo" alt="Gamehub Logo"></a>
         </div>
         <ul class="nav-list" id="navList">
-          <a href="index.html"><li class="list-item">Home</li></a>
-          <a href="games.html"><li class="list-item">Games</li></a>
-          <a href="about.html"><li class="list-item">About</li></a>
-          <a href="contact.html"><li class="list-item">Contact</li></a>
+          <li class="list-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="list-item"><a class="nav-link" href="games.html">Games</a></li>
+          <li class="list-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="list-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <div class="mobile-search">
-            <form id="searchBar" action="#">
+            <form id="mobileSearchBar" action="#">
                 <input type="text" placeholder="Search">
                 <button><i class="fa fa-search"></i></button>
             </form>
@@ -30,7 +30,7 @@
         </ul>
         
         <div class="desktop-search">
-          <form id="searchBar" action="#">
+          <form id="desktopSearchBar" action="#">
               <input type="text" placeholder="Search">
               <button><i class="fa fa-search"></i></button>
           </form>
@@ -90,7 +90,7 @@
               </div>
               <div class="form-col">
                 <div class="form-group">
-                  <textarea type="text" id="message" class="form-control" placeholder="Message" cols="30" rows="7"></textarea>
+                  <textarea id="message" class="form-control" placeholder="Message" cols="30" rows="7"></textarea>
                 </div>
               </div>
               <div class="form-col">
@@ -131,7 +131,7 @@
         </p>
       </div>
     </footer>
+    <script src="/js/script.js"></script>
+    <script src="/js/mobile-menu.js"></script>
   </body>
-  <script src="/js/script.js"></script>
-  <script src="/js/mobile-menu.js"></script>
 </html>
