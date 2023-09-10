@@ -409,6 +409,11 @@ main {
 
 .game-title {
     font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 130px;
+    display: inline-block;
 }
 
 .game-btn {
@@ -1202,10 +1207,19 @@ i {
     }
 }
 
+@media (min-width: 480px) and (max-width: 960px) {
+    .game-title {
+        max-width: 200px;
+    }
+}
+
 
 @media (min-width: 960px) {
     .game-container {
         text-align: left;
+    }
+    .game-title {
+        max-width: 170px;
     }
 }
 
