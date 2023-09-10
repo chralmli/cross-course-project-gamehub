@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     checkoutForm.addEventListener("submit", function(e) {
         e.preventDefault();
-        console.log("Checkout successful!");
     });
 
     document.getElementById("checkBtn").addEventListener("click", function() {

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function() {
     const gamesGrid = document.querySelector(".games-container .games-grid");
+    const errorMessage = document.getElementById("error-message");
 
     // Show loading indicator
     const loadingIndicator = document.getElementById("loading-indicator");
@@ -30,6 +31,13 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     } catch (error) {
         console.error("Fetch error:", error);
+
+        // Display error message
+        errorMessage.classList.remove("hidden");
+        errorMessage.textContent = "An error occurred while fetching games";
+
+        // Hide loading indicator in case of error
+        loadingIndicator.classList.add("hidden");
     }
 });
 

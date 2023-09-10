@@ -10,6 +10,7 @@
   <body>
     <div id="body-bg-img"></div>
       <div id="landing-bg">
+        <!-- Navigation -->
         <nav class="navbar navbar-fixed">
           <div id="logo-wrap">
             <a href="/index.html"><img src="/images/gamehub-white-logo.png" id="logo" alt="Gamehub Logo"></a>
@@ -29,7 +30,6 @@
               </div>
             </div>
           </ul>
-
           <div class="desktop-search">
             <form id="desktopSearchBar" action="#">
                 <input type="text" placeholder="Search">
@@ -39,7 +39,6 @@
           <div class="cart-button-wrap">
             <a href="cart.html" id="cart-button"><i class="fa fa-shopping-cart"></i></a>
           </div>
-
           <div class="mobile-menu" id="toggleButton">
             <div class="line"></div>
             <div class="line"></div>
@@ -55,18 +54,23 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
-        <main>
+      <!-- Main Content -->
+      <main>
+        <div class="container">
           <div class="loader-wrapper hidden" id="loading-indicator">
             <div class="loader"></div>
           </div>
           <div class="games-container">
             <div class="heading">
               <h3 class="featured-heading">NEW GAMES</h3>
-              <a href="games.html">Discover More</a>
+              <div class="btn-wrapper">
+                <a class="heading-btn"href="games.html">Discover More</a>
+              </div> 
             </div>
             <div class="heading-line"></div>
+            <div class="error-wrapper">
+              <div id="error-message" class="hidden"></div>
+            </div>
             <div class="games-grid"></div>
           </div>
           <div class="box">
@@ -77,10 +81,9 @@
                 <a href="contact.html" class="btn">Get in Touch</a>
               </div>
           </div>
-        </main>
       </div>
-    
-
+      </main>
+    <!-- Footer -->
     <footer>
       <div class="footer-content">
         <ul class="footer-nav">
@@ -108,6 +111,7 @@
         </p>
       </div>
     </footer>
+    <!-- Scripts -->
     <script src="/js/script.js"></script>
     <script src="/js/mobile-menu.js"></script>
     <script src="/js/featuredGames.js"></script>

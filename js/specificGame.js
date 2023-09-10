@@ -6,6 +6,8 @@ const apiEndpoint = `https://api.noroff.dev/api/v1/gamehub/${gameId}`;
 // Show loading indicator
 const loadingIndicator = document.getElementById("loading-indicator");
 loadingIndicator.classList.remove("hidden");
+// Error message
+const errorMessage = document.getElementById("error-message");
 
 // Fetch the specific game details
 async function getGameDetails () {
@@ -47,6 +49,10 @@ async function getGameDetails () {
         console.error("Fetch error:", error);
         // Hide loading indicator if there was an error
         loadingIndicator.classList.add("hidden");
+
+        // Display error message
+        errorMessage.classList.remove("hidden");
+        errorMessage.textContent = "An error occurred while fetching games"
     }
 }
 

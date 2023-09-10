@@ -9,6 +9,7 @@
   </head>
   <body>
     <div id="body-bg-img"></div>
+    <!-- Navigation -->
       <nav class="navbar navbar-fixed">
         <div id="logo-wrap">
           <a href="/index.html"><img src="/images/gamehub-white-logo.png" id="logo" alt="Gamehub Logo"></a>
@@ -28,7 +29,6 @@
             </div>
           </div>
         </ul>
-        
         <div class="desktop-search">
           <form id="desktopSearchBar" action="#">
               <input type="text" placeholder="Search">
@@ -44,14 +44,17 @@
           <div class="line"></div>
         </div>
       </nav>
+      <!-- Main content -->
     <main>
-      <div id="error-message" class="hidden"></div>
       <div class="container">
         <div class="games-container">
           <div class="heading-container">
             <h3 class="games-heading">CATALOG</h3>
           </div>
           <div class="heading-line"></div>
+          <div class="error-wrapper">
+            <div id="error-message" class="hidden"></div>
+          </div>
           <div class="loader-wrapper" id="loading-indicator">
             <div class="loader"></div>
           </div>
@@ -59,8 +62,8 @@
           </div>
         </div>
       </div>
-
     </main>
+    <!-- Footer -->
     <footer>
       <div class="footer-content">
         <ul class="footer-nav">
@@ -88,6 +91,7 @@
         </p>
       </div>
     </footer>
+    <!-- Scripts -->
     <script src="/js/script.js"></script>
     <script src="/js/mobile-menu.js"></script>
     <script src="/js/gamesList.js"></script>
