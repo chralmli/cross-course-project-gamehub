@@ -208,7 +208,7 @@ a {
 }
 
 .active {
-    display: block;
+    background: #5147DB;
 }
 
 .nav-list .list-item {
@@ -359,6 +359,8 @@ a {
 
 /* MAIN CONTENT */
 main {
+    max-width: 1600px;
+    margin: auto;
     padding-top: 7rem;
 }
 
@@ -497,6 +499,32 @@ p {
 
 .cart-content-container {
     width: 100%;
+}
+
+.clear-button-wrapper {
+    position: absolute;
+    top: 70px;
+}
+
+#clear-cart-button {
+    background: transparent;
+    color: #dedede;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: underline;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10rem;
+}
+
+.back-to-shop {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .cart-items {
@@ -1190,6 +1218,10 @@ i {
 
     .check-heading {
         font-size: 22px;
+    }
+
+    .clear-button-wrapper {
+        top: 20vh;
     }
 
     /* DESKTOP GAME SPECIFIC  */

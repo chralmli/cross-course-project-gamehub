@@ -47,3 +47,10 @@ function updateCartCount() {
 document.addEventListener("DOMContentLoaded", function() {
 saveCart();
 })
+
+// clear the cart
+function clearCart() {
+    cart = [];
+    saveCart();
+    updateCartCount();
+}

@@ -40,12 +40,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Retrieve cart items from local storage
         cart = JSON.parse(localStorage.getItem("cart") || "[]");
+
         let cartHTML = "";
-        cart.forEach(item => {
-            const cartItemHTML = createCartItemHTML(item);
-            cartHTML += cartItemHTML;
-        });
+        if (cart.length === 0) {
+            cartHTML = `<p>Your cart is empty.</p><a class="back-to-shop" href="games.html">Go back to Shop</a>`;
+            document.getElementById("clear-cart-button").style.display = "none";
+        } else {
+            cart.forEach(item => {
+                const cartItemHTML = createCartItemHTML(item);
+                cartHTML += cartItemHTML;
+            });
+        }
+
         cartContainer.innerHTML = cartHTML;
+        updateCartCount();
+    }
+
+    function clearCart() {
+        cart = [];
+        saveCart();
+        renderCartItems();
+        updatePrices();
         updateCartCount();
     }
 
@@ -101,4 +116,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("checkBtn").addEventListener("click", function() {
         window.location.href = "checkout.html";
     });
+
+    document.getElementById("clear-cart-button").addEventListener("click", function() {
+        clearCart();
+    })
 });
