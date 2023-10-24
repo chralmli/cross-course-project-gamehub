@@ -2,7 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const gameId = urlParams.get("id");
 // API endpoint including the game ID
-const apiEndpoint = `http://game-hub-cms.local/wp-json/wc/store/products/${gameId}`;
+const apiEndpoint = `http://ibang.no/wp-json/wc/store/products/${gameId}`;
 // Show loading indicator
 const loadingIndicator = document.getElementById("loading-indicator");
 loadingIndicator.classList.remove("hidden");
