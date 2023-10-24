@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     localStorage.setItem("cartCount", cart.length);
 
     function updatePrices() {
-        const subtotal = cart.reduce((acc, item) => acc + item.price * item.count, 0);
+        const subtotal = cart.reduce((acc, item) => acc + item.prices.price * item.count, 0);
         const shipping = 9.99;
         const total = subtotal + shipping;
 
@@ -68,11 +68,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const cartItemHTML = `
         <div class="cart-items">
             <div class="img-box">
-                <img src="${item.image}" alt="${item.title}" height="65px">
+                <img src="${item.images[0].src}" alt="${item.name}" height="65px">
             </div>
             <div class="desc">
-                <h1 class="title">${item.title}</h1>
-                <h3 class="platform">${item.genre}</h3>
+                <h1 class="title">${item.name}</h1>
+                <h3 class="platform">${item.categories[0].name}</h3>
             </div>
             <div class="counter">
                 <i class="fa-solid fa-plus" data-item-id="${item.id}"></i>
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <i class="fa-solid fa-minus" data-item-id="${item.id}"></i>
             </div>
             <div class="prices">
-                <div class="amount">$${item.price}</div>
+                <div class="amount">${item.prices.currency_symbol}${item.prices.price}</div>
             </div>
             <div class="remove">
                 <i class="fa-solid fa-trash" data-item-id="${item.id}"></i>

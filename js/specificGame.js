@@ -2,7 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const gameId = urlParams.get("id");
 // API endpoint including the game ID
-const apiEndpoint = `https://api.noroff.dev/api/v1/gamehub/${gameId}`;
+const apiEndpoint = `http://game-hub-cms.local/wp-json/wc/store/products/${gameId}`;
 // Show loading indicator
 const loadingIndicator = document.getElementById("loading-indicator");
 loadingIndicator.classList.remove("hidden");
@@ -19,13 +19,13 @@ async function getGameDetails () {
         // Create HTML
         const gameDetails = `
         <div class="left-col">
-            <img src="${game.image}" alt="${game.title}" class="game-img">
+            <img src="${game.images[0].src}" alt="${game.name}" class="game-img">
         </div>
         <div class="right-col">
             <div class="info-wrap">
-                <h1 class="spec-game-title">${game.title}</h1>
-                <span class="spec-platform">Genre: ${game.genre}</span>
-                <span class="price">$${game.price}</span>
+                <h1 class="spec-game-title">${game.name}</h1>
+                <span class="spec-platform">Genre: ${game.categories[0].name}</span>
+                <span class="price">${game.prices.currency_symbol}${game.prices.price}</span>
             </div>
             <div class="buy-btn-wrap">
                 <button id="addToCartBtn" class="buy-btn btn">Add to Cart</button>

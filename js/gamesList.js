@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', async function() {
                 const gameItem = `
                 <a href="game-specific.html?id=${game.id}">
                     <div class="game-item">
-                        <img src="${game.image}" alt="${game.title}" class="game-img">
+                        <img src="${game.images[0].src}" alt="${game.name}" class="game-img">
                         <div class="game-spec">
-                            <h5 class="game-title">${game.title}</h5>
-                            <h5 class="game-price">$${game.price}</h5>
+                            <h5 class="game-title">${game.name}</h5>
+                            <h5 class="game-price">${game.prices.currency_symbol}${game.prices.price}</h5>
                                 <button class="game-btn btn">Details</button>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Fetch the games data from the API
     try {
-        const response = await fetch("https://api.noroff.dev/api/v1/gamehub");
+        const response = await fetch("http://game-hub-cms.local/wp-json/wc/store/products");
         gamesData = await response.json();
 
         // Display content and hide loading indicator
