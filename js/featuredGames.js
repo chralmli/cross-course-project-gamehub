@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     // Fetch the games data from the API
     try {
-        const response = await fetch("http://ibang.no/wp-json/wc/store/products");
+        const response = await fetch("https://ibang.no/wp-json/wc/store/products");
         const games = await response.json();
 
         const fourGames = games.slice(0, 4);

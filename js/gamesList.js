@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Fetch the games data from the API
     try {
-        const response = await fetch("http://ibang.no/wp-json/wc/store/products");
+        const response = await fetch("https://ibang.no/wp-json/wc/store/products");
         gamesData = await response.json();
 
         // Display content and hide loading indicator
