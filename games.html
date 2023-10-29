@@ -62,6 +62,25 @@
             <h3 class="games-heading">CATALOG</h3>
           </div>
           <div class="heading-line"></div>
+
+          <div class="controls">
+            <!-- Sort Dropdown -->
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+              <option value="">--Select--</option>
+              <option value="price-asc">Price (Lowest to Highest)</option>
+              <option value="price-desc">Price (Highest to Lowest)</option>
+            </select>
+
+            <!-- Filter Dropdown -->
+            <label for="filter-select">Filter by Category:</label>
+            <select id="filter-select">
+              <option value="">--All Categories--</option>
+              <!-- Dynamically populated categories -->
+            </select>
+          </div>
+
+
           <div class="error-wrapper">
             <div id="error-message" class="hidden"></div>
           </div>
