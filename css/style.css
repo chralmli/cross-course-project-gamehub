@@ -28,6 +28,10 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+
+    @media (min-width: 960px) {
+        min-width: 960px;
+    }
 }
 
 .error-wrapper {
@@ -365,6 +369,42 @@ main {
 }
 
 /* Games */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.controls label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.controls select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.controls select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rbga(0, 123, 255, 0.5);
+}
+
+.controls select option {
+    padding: 8px;
+}
+
 .games-grid {
     display: grid;
     grid-template-columns: 50% 50%;
